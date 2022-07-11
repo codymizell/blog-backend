@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.b971d941.css","mappings":"AAAA,KACE,wBAAyB,CACzB,UACF,CAEA,MACE,oBACF","sources":["App.css"],"sourcesContent":["body {\r\n  background-color: #292C34;\r\n  color: white;\r\n}\r\n\r\ninput {\r\n  color: white !important;\r\n}"],"names":[],"sourceRoot":""}
