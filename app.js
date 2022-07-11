@@ -20,13 +20,6 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true })
     error('error connected to mongoDB:', err.message)
   })
 
-mongoose.connect('mongodb+srv://*********@********.mongodb.net/test? retryWrites = true',)
-mongoose.connection.once('open', function () {
-  console.log('Conection has been made!')
-}).on('error', function (error) {
-  console.log('Error is: ', error)
-})
-
 app.use(cors())
 app.use(express.static('build'))
 app.use(express.json())
