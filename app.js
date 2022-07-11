@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 
 info('connecting to', config.MONGODB_URI)
 
-mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true })
+mongoose.connect(config.MONGODB_URI)
   .then(() => {
     info('connected to mongoDB')
   })
