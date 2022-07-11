@@ -13,7 +13,7 @@ loginsRouter.post('/', async (request, response) => {
     : await bcrypt.compare(password, user.passwordHash)
 
   if (!(user && passwordCorrect)) {
-    response.status(401).json({ error: 'incorrect username or password' })
+    return response.status(401).json({ error: 'incorrect username or password' })
   }
 
   const userForToken = {
@@ -25,7 +25,7 @@ loginsRouter.post('/', async (request, response) => {
 
   response
     .status(200)
-    .send({ token, username: user.username, name: user.name })
+    .send({ token, username: user.username, id: user._id, avatar: user.avatar })
 })
 
 module.exports = loginsRouter

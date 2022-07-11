@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     minLength: 3,
     required: true
   },
-  name: String,
+  avatar: String,
   passwordHash: String,
   blogs: [
     {
@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
       ref: 'Blog'
     }
   ],
+  ip: String
 })
 
 userSchema.set('toJSON', {
@@ -22,6 +23,7 @@ userSchema.set('toJSON', {
     delete returnedObject._id
     delete returnedObject.__v
     delete returnedObject.passwordHash
+    delete returnedObject.ip
   }
 })
 
